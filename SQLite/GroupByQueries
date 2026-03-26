@@ -1,0 +1,59 @@
+SELECT COUNT(*) as record_count FROM station_data;
+
+SELECT year, month, COUNT(*) as record_count 
+FROM station_data
+WHERE tornado =1
+GROUP BY year,month;
+
+--use indexes in group by instead of field names - only SQLite
+SELECT year, month, COUNT(*) as record_count 
+FROM station_data
+WHERE tornado =1
+GROUP BY 1,2;
+
+SELECT year, month, COUNT(*) as record_count 
+FROM station_data
+WHERE tornado =1
+GROUP BY 1,2
+ORDER BY year, month;
+
+SELECT year, month, COUNT(*) as record_count 
+FROM station_data
+WHERE tornado =1
+GROUP BY 1,2
+ORDER BY year DESC, month;
+
+
+SELECT COUNT(snow_depth) AS recorded_snow_depth_count
+FROM station_data;
+
+
+SELECT month, round(AVG(temperature),2) as avg_temp
+FROM station_data
+WHERE year >= 2000
+GROUP BY month;
+
+SELECT year,
+SUM(snow_depth) as total_snow
+FROM station_data
+WHERE year >= 2005
+GROUP By year;
+
+
+SELECT year,
+SUM(precipitation) AS total_precipitation,
+SUM(snow_depth) as total_snow,
+Max(precipitation) AS max_precipitation
+
+FROM station_data
+WHERE year >= 2005
+GROUP BY year;
+
+--For oracle cannot use aliases
+SELECT year,
+SUM(precipitation) AS total_precipitation
+FROM station_data
+GROUP BY year
+HAVING total_precipitation > 30;
+
+

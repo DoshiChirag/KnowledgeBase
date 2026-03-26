@@ -1,0 +1,15 @@
+SELECT * FROM CUSTOMER_ORDER
+WHERE SHIP_DATE < '2015-05-21';
+
+SELECT DATE('now', '-1 day');
+SELECT DATE('now', '+3 month', '-1 day');
+
+SELECT DATE('2015-12-07', '+3 month', '-1 day');
+
+SELECT TIME('now');
+
+SELECT TIME('now', '+1 minute');
+
+SELECT DATETIME('2015-12-13 16:04:11', '-1 day', '+3 hour');
+
+SELECT strftime('%d-%m-%Y', 'now');

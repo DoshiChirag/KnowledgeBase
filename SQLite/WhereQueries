@@ -1,0 +1,31 @@
+SELECT * FROM station_data
+WHERE year <> 2010;
+
+SELECT * FROM station_data
+WHERE year BETWEEN  2005 AND 2010;
+
+SELECT * FROM station_data
+WHERE year>=2005 AND  year<=2010;
+
+SELECT * FROM station_data
+WHERE Month = 3 OR Month = 6 OR Month = 9 OR Month = 12;
+
+SELECT * FROM station_data
+WHERE Month IN (3,6,9, 12);
+
+SELECT * FROM station_data
+WHERE Month NOT IN (3,6,9, 12);
+
+SELECT * FROM station_data
+WHERE report_code  IN ('513A63', '1F8A7B', 'EF616A');
+
+SELECT * FROM station_data
+WHERE length(report_code) <> 6;
+
+
+SELECT * FROM station_data
+WHERE report_code LIKE 'B_C%';
+
+SELECT * FROM station_data
+WHERE report_code REGEXP '^A.*$';
+

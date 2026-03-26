@@ -1,0 +1,23 @@
+SELECT * FROM Station_data
+WHERE tornado = 1 AND hail = 1;
+
+SELECT * FROM Station_data
+WHERE tornado = true AND hail = true;
+
+SELECT * FROM Station_data
+WHERE tornado AND hail;
+
+SELECT * FROM Station_data
+WHERE NOT tornado AND hail;
+
+SELECT * From station_data
+where snow_depth IS NOT NULL;
+
+--Turn all NULLs to 0 (default NULL is also zero)
+SELECT * FROM station_data
+WHERE coalesce(precipitation, 0) <= 0.5
+
+
+
+
+

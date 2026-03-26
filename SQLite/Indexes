@@ -1,0 +1,5 @@
+CREATE INDEX price_index ON PRODUCT(price);
+
+
+--enforces constraint to keep name unique in database
+CREATE UNIQUE INDEX name_index ON CUSTOMER(name);

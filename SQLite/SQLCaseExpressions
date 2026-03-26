@@ -1,0 +1,51 @@
+SELECT report_code, year, month, day, wind_speed,
+CASE
+    WHEN wind_Speed >=40  THEN 'HIGH'
+    WHEN wind_speed >= 30 THEN 'MODERATE'
+    ELSE 'LOW'
+END AS wind_severity
+FROM station_data;
+
+SELECT 
+CASE
+    WHEN wind_Speed >=40  THEN 'HIGH'
+    WHEN wind_speed >= 30 THEN 'MODERATE'
+    ELSE 'LOW'
+END AS wind_severity,
+COUNT(*) AS record_count
+FROM station_data
+GROUP BY wind_severity;
+
+
+SELECT 
+CASE
+    WHEN wind_Speed >=40  THEN 'HIGH'
+    WHEN wind_speed >= 30 THEN 'MODERATE'
+    ELSE 'LOW'
+END AS wind_severity,
+COUNT(*) AS record_count
+FROM station_data
+GROUP BY CASE
+    WHEN wind_Speed >=40  THEN 'HIGH'
+    WHEN wind_speed >= 30 THEN 'MODERATE'
+    ELSE 'LOW'
+END;
+
+SELECT year, month, 
+SUM(precipitation) AS tornado_precipitation
+FROM station_data
+
+WHERE tornado = 1
+AND year >= 1990
+
+GROUP BY year,month;
+
+
+SELECT year, month, 
+SUM(CASE WHEN tornado = 1 THEN precipitation ELSE NULL END) AS tornado_precipitation,
+SUM(CASE WHEN tornado = 0 THEN precipitation ELSE NULL END) AS non_tornado_precipitation
+FROM station_data
+
+WHERE year >= 1990
+
+GROUP BY year,month;

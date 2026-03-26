@@ -1,0 +1,10 @@
+﻿// CustomTemplates.h : Include file for standard system include files,
+// or project specific include files.
+
+#pragma once
+
+#include <iostream>
+
+// TODO: Reference additional headers your program requires here.
+
+//#define MAX(a, b) ((a > b) ? (a) : (b))

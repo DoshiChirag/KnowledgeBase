@@ -1,0 +1,6 @@
+C:\ACM\TrainingResources\SQL Server\CLR\CLRFunctions\CLRFunctions\bin\Release\CLRFunctions.dll
+C:\ACM\TrainingResources\SQL Server\CLR\CLRFunctions\CLRFunctions\bin\Release\CLRFunctions.pdb
+C:\ACM\TrainingResources\SQL Server\CLR\CLRFunctions\CLRFunctions\obj\Release\CLRFunctions.csproj.AssemblyReference.cache
+C:\ACM\TrainingResources\SQL Server\CLR\CLRFunctions\CLRFunctions\obj\Release\CLRFunctions.csproj.CoreCompileInputs.cache
+C:\ACM\TrainingResources\SQL Server\CLR\CLRFunctions\CLRFunctions\obj\Release\CLRFunctions.dll
+C:\ACM\TrainingResources\SQL Server\CLR\CLRFunctions\CLRFunctions\obj\Release\CLRFunctions.pdb
