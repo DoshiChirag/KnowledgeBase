@@ -5,12 +5,12 @@ app = Flask(__name__)
 
 # Function to fetch live cryptocurrency prices
 def fetch_crypto_prices():
-    url = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,dogecoin,binancecoin,cardano,solana,polkadot,shiba-inu,litecoin&vs_currencies=usd"
+    url = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,dogecoin,binancecoin,cardano,solana,polkadot,shiba-inu,litecoin,chainlink&vs_currencies=usd"
     response = requests.get(url)
     if response.status_code == 200:
         return response.json()
     else:
-        return {crypto: {"usd": "Error fetching price"} for crypto in ["Bitcoin", "Ethereum", "Dogecoin", "BinanceCoin", "Cardano", "Solana", "Polkadot", "Shiba Inu", "Litecoin"]}
+        return {crypto: {"usd": "Error fetching price"} for crypto in ["Bitcoin", "Ethereum", "Dogecoin", "BinanceCoin", "Cardano", "Solana", "Polkadot", "Shiba Inu", "Litecoin", "Chainlink"]}
 
 # Function to fetch the price of gold
 def fetch_gold_price():
