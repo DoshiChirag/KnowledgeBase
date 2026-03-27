@@ -3,6 +3,7 @@ from flask import Flask, jsonify, render_template
 
 app = Flask(__name__)
 
+
 # Function to fetch live cryptocurrency prices
 def fetch_crypto_prices():
     url = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,dogecoin,binancecoin,cardano,solana,polkadot,shiba-inu,litecoin,chainlink&vs_currencies=usd"
@@ -37,3 +38,5 @@ def get_prices():
 
 if __name__ == '__main__':
     app.run(debug=True)
+    print("Crypto Prices API is running on http://)localhost:5000")
+    
