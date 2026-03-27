@@ -24,7 +24,10 @@ def fetch_gold_price():
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    crypto_prices = fetch_crypto_prices()
+    gold_price = fetch_gold_price()
+    prices = {**crypto_prices, **gold_price}
+    return render_template('index.html', prices=prices)
 
 @app.route('/api/prices')
 def get_prices():

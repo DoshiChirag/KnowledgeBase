@@ -7,27 +7,17 @@
 </head>
 <body>
     <h1>Cryptocurrency and Gold Prices</h1>
-    <ul id="crypto-list"></ul>
-    <ul id="gold-list"></ul>
-
-    <script>
-        fetch('/api/prices')
-            .then(response => response.json())
-            .then(data => {
-                const cryptoList = document.getElementById('crypto-list');
-                const goldList = document.getElementById('gold-list');
-
-                for (const [name, details] of Object.entries(data)) {
-                    const listItem = document.createElement('li');
-                    listItem.textContent = `${name}: $${details.usd}`;
-
-                    if (name === 'Gold') {
-                        goldList.appendChild(listItem);
-                    } else {
-                        cryptoList.appendChild(listItem);
-                    }
-                }
-            });
-    </script>
+    <ul id="crypto-list">
+        {% for name, details in prices.items() %}
+        {% if name != 'Gold' %}
+        <li>{{ name }}: ${{ details.usd }}</li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+    <ul id="gold-list">
+        {% if 'Gold' in prices %}
+        <li>Gold: ${{ prices['Gold'].usd }}</li>
+        {% endif %}
+    </ul>
 </body>
 </html>
