@@ -4,13 +4,13 @@ class TaskManager:
     def __init__(self):
         self.tasks = []
 
-    def add_task(self, title, description):
+    def add_task(self, title, description, due_date=None):
         task_id = len(self.tasks) + 1
-        task = Task(task_id, title, description)
+        task = Task(task_id, title, description, due_date=due_date)
         self.tasks.append(task)
         return task
 
-    def update_task(self, task_id, title=None, description=None, completed=None):
+    def update_task(self, task_id, title=None, description=None, completed=None, due_date=None):
         for task in self.tasks:
             if task.task_id == task_id:
                 if title is not None:
@@ -19,6 +19,8 @@ class TaskManager:
                     task.description = description
                 if completed is not None:
                     task.completed = completed
+                if due_date is not None:
+                    task.due_date = due_date
                 return task
         return None
 

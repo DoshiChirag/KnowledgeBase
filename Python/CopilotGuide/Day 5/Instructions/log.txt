@@ -1,0 +1,2 @@
+[2026-03-28] Added Flask server endpoint /gold that fetches the current gold price from a mock API endpoint. Includes error handling and JSON response formatting.
+[2026-03-28] Added /gold/history endpoint to Flask server. It fetches the last 20 days of gold prices from a mock API and returns structured JSON. Includes validation and error handling.

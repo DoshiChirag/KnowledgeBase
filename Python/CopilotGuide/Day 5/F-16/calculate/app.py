@@ -1,4 +1,4 @@
 import funcs
 
-result = funcs.calculate(3, 6)
+result = funcs.multiply(3, 6)
 print(result)

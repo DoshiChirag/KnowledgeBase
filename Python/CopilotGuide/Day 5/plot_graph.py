@@ -37,4 +37,5 @@ plt.legend()
 # Show the plot
 plt.grid(True)
 plt.tight_layout()
-plt.show()
+#plt.show()
+plt.savefig("exchange_rate_plot.png")

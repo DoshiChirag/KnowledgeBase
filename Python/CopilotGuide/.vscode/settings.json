@@ -7,5 +7,8 @@
         "*test.py"
     ],
     "python.testing.pytestEnabled": false,
-    "python.testing.unittestEnabled": true
+    "python.testing.unittestEnabled": true,
+    "github.copilot.chat.promptFileContextProvider.enabled": true,
+    "github.copilot.chat.promptFilesLocations": ".github/prompts"
+
 }

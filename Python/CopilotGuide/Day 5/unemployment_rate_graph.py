@@ -19,4 +19,5 @@ plt.legend()
 
 # Show the graph
 plt.tight_layout()
-plt.show()
+#plt.show()
+plt.savefig('unemployment_rate_graph.png')

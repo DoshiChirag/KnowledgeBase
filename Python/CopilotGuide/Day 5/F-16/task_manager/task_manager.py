@@ -21,7 +21,8 @@ def main():
         if choice == "1":
             title = input("Enter task title: ")
             description = input("Enter task description: ")
-            task = manager.add_task(title, description)
+            due_date = input("Enter due date (YYYY-MM-DD, leave blank if none): ") or None
+            task = manager.add_task(title, description, due_date)
             print("Task added:", task)
 
         elif choice == "2":
@@ -30,7 +31,8 @@ def main():
             description = input("Enter new description (leave blank to skip): ") or None
             completed = input("Mark as completed? (yes/no/leave blank to skip): ")
             completed = True if completed.lower() == "yes" else False if completed.lower() == "no" else None
-            task = manager.update_task(task_id, title, description, completed)
+            due_date = input("Enter new due date (YYYY-MM-DD, leave blank to skip): ") or None
+            task = manager.update_task(task_id, title, description, completed, due_date)
             if task:
                 print("Task updated:", task)
             else:
