@@ -1,32 +1,46 @@
+import re
+
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
+
+
+def evaluate_expression(expression: str):
+    """Evaluate a simple expression like 12.5+3 or 9/4."""
+    normalized = expression.replace(" ", "")
+    pattern = r"^(-?\d+(?:\.\d+)?)([+\-*/])(-?\d+(?:\.\d+)?)$"
+    match = re.match(pattern, normalized)
+
+    if not match:
+        return None, "Enter an expression like 12+5"
+
+    left, operator, right = match.groups()
+    num1 = float(left)
+    num2 = float(right)
+
+    if operator == "+":
+        return num1 + num2, None
+    if operator == "-":
+        return num1 - num2, None
+    if operator == "*":
+        return num1 * num2, None
+    if operator == "/":
+        if num2 == 0:
+            return None, "Error: Division by zero"
+        return num1 / num2, None
+
+    return None, "Invalid operation"
 
 @app.route('/')
 def calculator():
     return render_template('calculator.html')
 
+
 @app.route('/calculate', methods=['POST'])
 def calculate():
-    try:
-        num1 = float(request.form['num1'])
-        num2 = float(request.form['num2'])
-        operation = request.form['operation']
-
-        if operation == 'add':
-            result = num1 + num2
-        elif operation == 'subtract':
-            result = num1 - num2
-        elif operation == 'multiply':
-            result = num1 * num2
-        elif operation == 'divide':
-            result = num1 / num2 if num2 != 0 else 'Error: Division by zero'
-        else:
-            result = 'Invalid operation'
-
-        return render_template('calculator.html', result=result)
-    except ValueError:
-        return render_template('calculator.html', result='Error: Invalid input')
+    expression = request.form.get('expression', '')
+    result, error = evaluate_expression(expression)
+    return render_template('calculator.html', expression=expression, result=result, error=error)
 
 if __name__ == '__main__':
     app.run(debug=True)

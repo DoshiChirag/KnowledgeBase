@@ -1,0 +1,15 @@
+{
+    "servers": {
+       "github":{
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-github"
+            ],
+             "env": {
+                "GITHUB_PERSONAL_ACCESS_TOKEN" :"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"
+            }
+       }
+    
+    }
+}

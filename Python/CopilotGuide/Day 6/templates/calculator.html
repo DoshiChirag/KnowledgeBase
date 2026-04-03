@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Calculator</title>
+    <style>
+        :root {
+            --bg: #f4f7fb;
+            --panel: #ffffff;
+            --text: #1f2937;
+            --muted: #6b7280;
+            --primary: #0f766e;
+            --primary-strong: #115e59;
+            --accent: #f59e0b;
+            --danger: #dc2626;
+            --shadow: 0 10px 30px rgba(2, 6, 23, 0.12);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            background: radial-gradient(circle at top left, #e0f2fe 0%, var(--bg) 45%, #dbeafe 100%);
+            color: var(--text);
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .calculator {
+            width: min(94vw, 360px);
+            background: var(--panel);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            padding: 18px;
+        }
+
+        .title {
+            margin: 0 0 12px;
+            font-size: 1.15rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            color: var(--primary-strong);
+        }
+
+        .display {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid #d1d5db;
+            font-size: 1.3rem;
+            text-align: right;
+            margin-bottom: 12px;
+            background: #f9fafb;
+        }
+
+        .result,
+        .error {
+            margin: 0 0 12px;
+            min-height: 24px;
+            font-size: 0.95rem;
+        }
+
+        .result {
+            color: var(--primary-strong);
+            font-weight: 600;
+        }
+
+        .error {
+            color: var(--danger);
+            font-weight: 600;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+        }
+
+        button {
+            border: none;
+            border-radius: 10px;
+            padding: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.06s ease, filter 0.18s ease;
+        }
+
+        button:active {
+            transform: translateY(1px) scale(0.99);
+        }
+
+        .number {
+            background: #e5e7eb;
+            color: var(--text);
+        }
+
+        .operator {
+            background: var(--accent);
+            color: #111827;
+        }
+
+        .action {
+            background: var(--primary);
+            color: #ffffff;
+        }
+
+        .clear {
+            background: #ef4444;
+            color: #ffffff;
+        }
+
+        .wide {
+            grid-column: span 2;
+        }
+    </style>
+</head>
+<body>
+    <form class="calculator" action="/calculate" method="post" novalidate>
+        <h1 class="title">Calculator</h1>
+        <input
+            id="display"
+            class="display"
+            name="expression"
+            type="text"
+            value="{{ expression or '' }}"
+            placeholder="Type or use buttons"
+            readonly
+        >
+
+        {% if result is not none %}
+            <p class="result">Result: {{ result }}</p>
+        {% else %}
+            <p class="result"></p>
+        {% endif %}
+
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% else %}
+            <p class="error"></p>
+        {% endif %}
+
+        <div class="buttons">
+            <button class="clear" type="button" onclick="clearDisplay()">C</button>
+            <button class="operator" type="button" onclick="appendChar('/')">/</button>
+            <button class="operator" type="button" onclick="appendChar('*')">*</button>
+            <button class="operator" type="button" onclick="appendChar('-')">-</button>
+
+            <button class="number" type="button" onclick="appendChar('7')">7</button>
+            <button class="number" type="button" onclick="appendChar('8')">8</button>
+            <button class="number" type="button" onclick="appendChar('9')">9</button>
+            <button class="operator" type="button" onclick="appendChar('+')">+</button>
+
+            <button class="number" type="button" onclick="appendChar('4')">4</button>
+            <button class="number" type="button" onclick="appendChar('5')">5</button>
+            <button class="number" type="button" onclick="appendChar('6')">6</button>
+            <button class="action wide" type="submit">=</button>
+
+            <button class="number" type="button" onclick="appendChar('1')">1</button>
+            <button class="number" type="button" onclick="appendChar('2')">2</button>
+            <button class="number" type="button" onclick="appendChar('3')">3</button>
+            <button class="number" type="button" onclick="appendChar('.')">.</button>
+
+            <button class="number wide" type="button" onclick="appendChar('0')">0</button>
+            <button class="action wide" type="button" onclick="submitForm()">Calculate</button>
+        </div>
+    </form>
+
+    <script>
+        const display = document.getElementById('display');
+
+        function appendChar(char) {
+            display.value += char;
+        }
+
+        function clearDisplay() {
+            display.value = '';
+        }
+
+        function submitForm() {
+            display.form.submit();
+        }
+    </script>
+</body>
+</html>
