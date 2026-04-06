@@ -1,0 +1,15 @@
+<publishData>
+  <publishTarget publishUrl="http://localhost/WCFServiceApp">
+    <file relUrl="bin/EntityFramework.xml" publishTime="12/07/2014 23:18:44" />
+    <file relUrl="bin/EntityFramework.SqlServer.dll" publishTime="12/07/2014 23:18:44" />
+    <file relUrl="bin/EntityFramework.SqlServer.xml" publishTime="12/07/2014 23:18:44" />
+    <file relUrl="bin/WCFServiceApp.dll" publishTime="04/24/2017 13:10:47" />
+    <file relUrl="Web.config" publishTime="01/08/2015 23:08:23" />
+    <file relUrl="bin/WCFDataContract.pdb" publishTime="04/24/2017 13:10:46" />
+    <file relUrl="bin/WCFServiceApp.dll.config" publishTime="01/08/2015 23:08:23" />
+    <file relUrl="bin/EntityFramework.dll" publishTime="12/07/2014 23:18:44" />
+    <file relUrl="WCFServiceApp.Service.svc" publishTime="04/24/2017 13:12:07" />
+    <file relUrl="bin/WCFServiceApp.pdb" publishTime="04/24/2017 13:10:47" />
+    <file relUrl="bin/WCFDataContract.dll" publishTime="04/24/2017 13:10:46" />
+  </publishTarget>
+</publishData>

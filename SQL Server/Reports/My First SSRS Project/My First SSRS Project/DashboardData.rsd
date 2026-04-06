@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
+  <DataSet Name="">
+    <Query>
+      <DataSourceReference>awdw</DataSourceReference>
+      <CommandText>SELECT     DimDate.CalendarQuarter, DimDate.CalendarYear, DimDate.FullDateAlternateKey, FactSalesQuota.SalesAmountQuota, FactResellerSales.SalesOrderNumber, 
+                      FactResellerSales.SalesOrderLineNumber, FactResellerSales.OrderQuantity, FactResellerSales.TotalProductCost, FactResellerSales.SalesAmount, 
+                      DimDate.EnglishMonthName, DimSalesTerritory.SalesTerritoryGroup, DimSalesTerritory.SalesTerritoryCountry, DimSalesTerritory.SalesTerritoryRegion
+FROM         DimDate INNER JOIN
+                      FactResellerSales ON DimDate.DateKey = FactResellerSales.ShipDateKey INNER JOIN
+                      DimSalesTerritory ON FactResellerSales.SalesTerritoryKey = DimSalesTerritory.SalesTerritoryKey INNER JOIN
+                      DimEmployee ON FactResellerSales.EmployeeKey = DimEmployee.EmployeeKey INNER JOIN
+                      FactSalesQuota ON DimDate.CalendarYear = FactSalesQuota.CalendarYear AND FactSalesQuota.CalendarQuarter = DimDate.CalendarQuarter AND 
+                      DimEmployee.EmployeeKey = FactSalesQuota.EmployeeKey</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="CalendarQuarter">
+        <DataField>CalendarQuarter</DataField>
+        <rd:TypeName>System.Byte</rd:TypeName>
+      </Field>
+      <Field Name="CalendarYear">
+        <DataField>CalendarYear</DataField>
+        <rd:TypeName>System.Int16</rd:TypeName>
+      </Field>
+      <Field Name="FullDateAlternateKey">
+        <DataField>FullDateAlternateKey</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="SalesAmountQuota">
+        <DataField>SalesAmountQuota</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="SalesOrderNumber">
+        <DataField>SalesOrderNumber</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SalesOrderLineNumber">
+        <DataField>SalesOrderLineNumber</DataField>
+        <rd:TypeName>System.Byte</rd:TypeName>
+      </Field>
+      <Field Name="OrderQuantity">
+        <DataField>OrderQuantity</DataField>
+        <rd:TypeName>System.Int16</rd:TypeName>
+      </Field>
+      <Field Name="TotalProductCost">
+        <DataField>TotalProductCost</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="SalesAmount">
+        <DataField>SalesAmount</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="EnglishMonthName">
+        <DataField>EnglishMonthName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SalesTerritoryGroup">
+        <DataField>SalesTerritoryGroup</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SalesTerritoryCountry">
+        <DataField>SalesTerritoryCountry</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SalesTerritoryRegion">
+        <DataField>SalesTerritoryRegion</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

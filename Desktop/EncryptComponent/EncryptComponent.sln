@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "EncryptionComponent", "EncryptionComponent\EncryptionComponent.vbproj", "{57200897-6CE1-4D6C-9462-172165FA15E0}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "EncryptionControl", "EncryptionControl\EncryptionControl.vbproj", "{088847F6-30C8-4F39-86E9-E89390F09BAB}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ComponentTest", "ComponentTest\ComponentTest.vbproj", "{C6F9D51B-739C-4181-B8BD-170337EC7D77}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57200897-6CE1-4D6C-9462-172165FA15E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57200897-6CE1-4D6C-9462-172165FA15E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57200897-6CE1-4D6C-9462-172165FA15E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57200897-6CE1-4D6C-9462-172165FA15E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{088847F6-30C8-4F39-86E9-E89390F09BAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{088847F6-30C8-4F39-86E9-E89390F09BAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{088847F6-30C8-4F39-86E9-E89390F09BAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{088847F6-30C8-4F39-86E9-E89390F09BAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6F9D51B-739C-4181-B8BD-170337EC7D77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6F9D51B-739C-4181-B8BD-170337EC7D77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6F9D51B-739C-4181-B8BD-170337EC7D77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6F9D51B-739C-4181-B8BD-170337EC7D77}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

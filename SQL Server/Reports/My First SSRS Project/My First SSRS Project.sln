@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "My First SSRS Project", "My First SSRS Project\My First SSRS Project.rptproj", "{2C1FC26E-D095-4E84-A308-BEACE4B11A9F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C1FC26E-D095-4E84-A308-BEACE4B11A9F}.Debug|Default.ActiveCfg = Debug
+		{2C1FC26E-D095-4E84-A308-BEACE4B11A9F}.Debug|Default.Build.0 = DebugLocal
+		{2C1FC26E-D095-4E84-A308-BEACE4B11A9F}.Debug|Default.Deploy.0 = DebugLocal
+		{2C1FC26E-D095-4E84-A308-BEACE4B11A9F}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{2C1FC26E-D095-4E84-A308-BEACE4B11A9F}.DebugLocal|Default.Build.0 = DebugLocal
+		{2C1FC26E-D095-4E84-A308-BEACE4B11A9F}.Release|Default.ActiveCfg = Release
+		{2C1FC26E-D095-4E84-A308-BEACE4B11A9F}.Release|Default.Build.0 = Release
+		{2C1FC26E-D095-4E84-A308-BEACE4B11A9F}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
