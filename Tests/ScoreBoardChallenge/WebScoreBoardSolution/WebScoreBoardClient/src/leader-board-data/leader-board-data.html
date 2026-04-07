@@ -1,0 +1,89 @@
+<style src="../styles.css"></style>
+<main class="main">
+ 
+  <div class="top:auto">
+    <h1>{{ title() }}</h1>   
+  </div>
+  <br />
+  <div class="divider" role="separator" aria-label="Divider"></div>
+  <br />
+
+  <div class="middle-side">
+    <div class="content">
+
+      <div class="middle-side">
+        <table border="1" height="70%" width="100%" data-selector="playerData">
+          <tr>
+            <td width="34%">
+              <p><B>Name : {{playerData.firstName}} {{playerData.lastName}}</B></p>
+            </td>
+            <td width="33%">
+              <p><B>Over All Score Board Ranking : {{OverAllRanking}}</B></p>
+            </td>
+            <td width="33%">
+              <p><B>Score : {{playerData.score}}</B></p>
+            </td>
+          </tr>
+          <tr>
+            <td width="34%">
+              <p><B>Player Tie Scores</B></p>
+            </td>
+            <td width="33%">
+              <p><B>Player Closest Higher Scores</B></p>
+            </td>
+            <td width="33%">
+              <p><B>Player Closest Lower Scores</B></p>
+            </td>
+          </tr>
+
+          <tr>
+            <td width="34%">
+              <ngx-datatable class="material"
+                             [rows]="tieScoresDataList"
+                             [columns]="columns"
+                             [headerHeight]="50"
+                             [footerHeight]="50"
+                             rowHeight="auto"
+                             [limit]="4"
+                             >
+                
+
+              </ngx-datatable>
+
+            </td>
+            <td width="33%">
+
+
+
+              <ngx-datatable class="material"
+                             [rows]="higherScoresDataList"
+                             [columns]="columns"
+                             [headerHeight]="50"
+                             [footerHeight]="50"
+                             rowHeight="auto"
+                             [limit]="4">
+                
+
+              </ngx-datatable>
+
+            </td>
+
+            <td width="33%">
+              <ngx-datatable class="material"
+                             [rows]="lowerScoresDataList"
+                             [columns]="columns"
+                             [headerHeight]="50"
+                             [footerHeight]="50"
+                             rowHeight="auto"
+                             [limit]="4">
+                
+
+              </ngx-datatable>
+            </td>
+          </tr>
+
+        </table>
+    </div>
+    </div>
+  </div>
+</main>

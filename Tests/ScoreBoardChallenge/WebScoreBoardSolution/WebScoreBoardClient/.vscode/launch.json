@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Node",
+      "type": "node",
+      "request": "attach",
+      "program": "C:\\Jobs\\TestsSource\\scoreboard-challenge-rzxfri\\WebScoreBoardSolution\\WebScoreBoardClient\\obj\\Debug"
+    }
+  ],
+  "compounds": []
+}

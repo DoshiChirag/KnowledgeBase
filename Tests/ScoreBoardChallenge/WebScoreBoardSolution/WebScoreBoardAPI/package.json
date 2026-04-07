@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@swimlane/ngx-datatable": "^22.0.0",
+    "bootstrap": "^5.3.8"
+  }
+}

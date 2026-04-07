@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebScoreBoardAPI", "WebScoreBoardAPI\WebScoreBoardAPI.csproj", "{847B1BFC-8843-469D-9AE4-D8D29BA89785}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "WebScoreBoardClient", "WebScoreBoardClient\WebScoreBoardClient.esproj", "{45061E99-D370-35A6-4652-2F3901546751}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{847B1BFC-8843-469D-9AE4-D8D29BA89785}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{847B1BFC-8843-469D-9AE4-D8D29BA89785}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{847B1BFC-8843-469D-9AE4-D8D29BA89785}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{847B1BFC-8843-469D-9AE4-D8D29BA89785}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45061E99-D370-35A6-4652-2F3901546751}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45061E99-D370-35A6-4652-2F3901546751}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45061E99-D370-35A6-4652-2F3901546751}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{45061E99-D370-35A6-4652-2F3901546751}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45061E99-D370-35A6-4652-2F3901546751}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45061E99-D370-35A6-4652-2F3901546751}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B600CC5-5DFD-4FCD-83D5-0685BCEBC6DE}
+	EndGlobalSection
+EndGlobal

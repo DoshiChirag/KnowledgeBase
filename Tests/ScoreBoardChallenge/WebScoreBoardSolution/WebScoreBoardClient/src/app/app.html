@@ -1,0 +1,47 @@
+<style src="../styles.css"></style>
+  
+<main class="main" *ngIf="showComponent">
+
+  <div class="top:auto">
+    <h1>{{ title() }}</h1>
+    <p></p>
+  </div>
+  <br />
+  <div class="divider" role="separator" aria-label="Divider"></div>
+  <br />
+  
+  <div class="left-side">
+   <form>
+    
+    <mat-form-field appearance="outline" color="primary">
+      <mat-label>Select a player</mat-label>
+       <mat-select [(value)]="selectedPlayer" (selectionChange)="onChange($event)">
+          <mat-option *ngFor="let player of dataList" [value]="player">{{player.firstName}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+  </div>
+
+  <br width="100%" />
+  <div class="divider" role="separator" aria-label="Divider"></div>
+  <br width="100%" />
+
+  <div class="content">
+    <div class="right-side">
+      <ngx-datatable class="material"
+                     [rows]="dataList"                     
+                     [columns]="columns"
+                     [headerHeight]="50"
+                     [footerHeight]="50"
+                     rowHeight="auto"
+                     [limit]="4"
+                     (select)="onSelect($event)">
+                     >
+        
+      </ngx-datatable>
+    </div>
+  </div>
+</main>
+<div class="contnet-wrap w-100">
+  <router-outlet></router-outlet>
+</div>

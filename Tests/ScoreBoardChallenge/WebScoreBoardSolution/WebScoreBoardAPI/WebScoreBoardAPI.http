@@ -1,0 +1,23 @@
+@WebScoreBoardAPI_HostAddress = http://localhost:5258
+
+GET {{WebScoreBoardAPI_HostAddress}}/GetAllPlayers/
+Accept: application/json
+
+
+Send request
+GET {{WebScoreBoardAPI_HostAddress}}/GetPlayersInTie/
+Accept: application/json
+
+send request
+GET {{WebScoreBoardAPI_HostAddress}}/GetAllPlayersWithClosestHigherScores/
+Accept: application/json
+
+send request
+GET {{WebScoreBoardAPI_HostAddress}}/GetAllPlayersWithClosestLowerScores/
+Accept: application/json
+
+send request
+GET {{WebScoreBoardAPI_HostAddress}}/GetPlayersOverallRanking/
+Accept: application/json
+
+###
