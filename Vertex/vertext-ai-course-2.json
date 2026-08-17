@@ -1,10 +1,9 @@
 {
   "type": "service_account",
   "project_id": "vertext-ai-course-493321",
-  "private_key_id": "9cb59526ab5d87cbe1dbcb3e17debd9f772c6fbd",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC/c2uO7VIqUP2e\no79LfGo8y/ajhcQppurt7RxStfksLXlEQhwSeq6weebvu4FGYyRib0q96fs59b03\nUy4PHbAN+L5IoP7477KIORfLQhjEmJnqpdNlE28zIRrXpZA4Xf5XY4xzg7AjBXLw\nxxNtlCuMIAWZhIkwRTbOQdfpLPGznb7NaMvyk+70OP20yOYRgdZObh3kAP6Dp7bi\nB3UrHQRGJICm6ieG98C7/uiV33y/rGQtJpqdjEMkxqQ7YRCKMeXqb9TSnNOMowBU\nPEFOHmHjN5bH1hxU+NmBE4HDDBwXGTeSk5A3oV3jPY38ot+F5Pj0tsWcl7/+Y69/\n8I3c4sAjAgMBAAECggEAN1GJ5CAFrE1/ou2MkiquZcfHicNWhXSCEGKBWxLSnyW6\nkvMJOnuxazOl+2Ix/d0av8iJj6uCmGI9nLVPqzV4T+kuTj0av2I/M2ZPzj7YekHf\nw3HLzbpaWKs5ntLrg6YBHk4Y4K3N4Kir6A+VuQVludTs2Ul2/HgbWGilEu6WHkA3\nwu/8Z07USiJUgfkWX95inuGzISSx6dYqmNnuQo0cgkRd56Y2qDw7irnQXW4Ce+qa\n+IZicjTiM2QePtwknIpAB5y0B6v5FnlEe0zQRa90s0UrfaKXKfGi2/RPWbtKQ34+\ncYYQQLQN4CdsFfgiPVSttZx6finnZAqczSD7MZLiXQKBgQDleT4xoEk/q4xeQGq/\nAmCWuGwgXVxJTgz4HtR5/OkmDfkgjLYssfK7DW0w7qPMRK3n5wNpZjPOclzuLin2\n2Zae87e2G1ZC94yCeK0fKkvkXfvjp+FRtvY3/n5TvaL6vDpefGg+yf0JAY9VAjLY\nibjW5HdwDVYIHvQOTyxiyxrF1QKBgQDVlPqxsQyQbzAcuRiuYi+vyfhPiJQ2zQIH\nuvc9Y62f+TNC5sFiDKGGv0DhTu+26prJC7zorfLnQ/5IGKIoGTen3mwz73r0IRdY\nC2KG4e2eEiDqUXfMe3xdO1l7rEWp4on6N7yItA0AFOgBduqWJMAYtFmx0TJFr7pZ\nvXJQXEoSFwKBgQCUlkFTWPqVI7usfAGi1SM99QTuoAVV4hg7wZrLspw1a+7YyMRd\nhIwr2rHNcXjWl9ITy15GLUt2bk8GWxYJJTOGkUFvxZvBmRF+mi1fdL/Xi5PDAb3A\nb7xW3Y9nIfAacy9IZz4JCjmyTzREUzwhQmxRmXZNNBV1BLX7XgDbp7AaUQKBgQCQ\neCdjDml7QVp/80wYmN28wJcv5SisMNvQss0OP2BwNzZPaJsiYXzZEoEmZiiLyAFP\nQJtVoGQPvtQ/nDoDeZtF95OlRbYbcE7EBV9t8WCzbXvKQ7UPIfAreDu9BfhRQ6Ul\nFZJ3vaKVjY6pfvCLAuzVSRjqyKCCtq0MirLKXMLVnQKBgDvRXwNUkfBu0MDjgeA0\nevj2VYtyQUbdk6/SqJJ6MU6hfks1fpdLEur04epbln1ykKS/1ZFo5KvgzRCm122D\n4H8maxLZMBva7HBo0KUR7/eioYDvwxxK2pHw6fOTpTW0pvyqviD0tLX7vrtD++v8\nFuwcCUz0+7pNffcdhfR/21kB\n-----END PRIVATE KEY-----\n",
-  "client_email": "vertex-ai-course@vertext-ai-course-493321.iam.gserviceaccount.com",
-  "client_id": "105165709927794153360",
+  "private_key_id": "PRIVATE_KEY_ID",
+  "private_key": "-----BEGIN PRIVATE KEY-----\n  "client_email": "vertex-ai-course@vertext-ai-course-493321.iam.gserviceaccount.com",
+  "client_id": "CLIENT_ID",
   "auth_uri": "https://accounts.google.com/o/oauth2/auth",
   "token_uri": "https://oauth2.googleapis.com/token",
   "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
