@@ -1,0 +1,17 @@
+{
+  "name": "web-form-app",
+  "version": "1.0.0",
+  "description": "This project is a simple web application that includes a form for user input. The form collects a username and an email address, and it includes client-side validation to ensure that the inputs are correctly filled out before submission.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "typescript": "^5.8.3"
+  }
+}

@@ -1,0 +1,11 @@
+﻿@model Razor.Models.CustomerModel
+
+@{
+    ViewBag.Title = "Customer Details";
+   
+}
+
+<meta name="viewport" content="width=device-width" />
+<div> @Model.CompanyName </div>
+<div> @Model.ContactName </div>
+<div> @Html.ActionLink("Customer Address", "Address") </div>

@@ -1,0 +1,9 @@
+{
+  "name": "tests-workspace-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "cd TS_Test && npm test",
+    "test:watch": "cd TS_Test && npm run test:watch"
+  }
+}
