@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.13.2 on win32)" generated="2026-10-15T18:35:07.874067" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Chrome" source="C:\ACM\KnowledgeBase\Tests\Automation\test_chrome.robot">
+<test id="s1-t1" name="Open Chrome" line="11">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-15T18:35:09.176944" level="INFO">Opening browser 'Chrome' to base url 'http://www.google.com'.</msg>
+<arg>${NavigateURL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-15T18:35:09.175999" elapsed="4.477917"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-15T18:35:13.932873" level="INFO">Page title is 'Google'.</msg>
+<arg>Google</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2026-10-15T18:35:13.655108" elapsed="0.278114"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-10-15T18:35:13.934119" elapsed="2.620846"/>
+</kw>
+<status status="PASS" start="2026-10-15T18:35:09.116505" elapsed="7.439314"/>
+</test>
+<test id="s1-t2" name="Checking google Searching" line="16">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2026-10-15T18:35:16.559050" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${Browser}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2026-10-15T18:35:16.558685" elapsed="2.517097"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-10-15T18:35:19.081270" level="INFO">Opening url 'http://www.google.com'</msg>
+<arg>${NavigateURL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-10-15T18:35:19.080782" elapsed="1.599255"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-15T18:35:20.963294" level="INFO">Page title is 'Google'.</msg>
+<arg>Google</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2026-10-15T18:35:20.681198" elapsed="0.282354"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-10-15T18:35:20.964320" elapsed="2.526967"/>
+</kw>
+<status status="PASS" start="2026-10-15T18:35:16.557313" elapsed="6.934642"/>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-10-15T18:35:23.493646" elapsed="0.000322"/>
+</kw>
+<status status="PASS" start="2026-10-15T18:35:07.880609" elapsed="15.613472"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test Chrome" id="s1" pass="2" fail="0" skip="0">Test Chrome</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

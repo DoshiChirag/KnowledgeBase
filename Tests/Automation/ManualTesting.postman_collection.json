@@ -1,0 +1,122 @@
+{
+  "info": {
+    "_postman_id": "5e8f1b60-8429-4090-acfe-f567298ac098",
+    "name": "ManualTesting",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49414982",
+    "_collection_link": "https://go.postman.co/collection/49414982-5e8f1b60-8429-4090-acfe-f567298ac098?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "FlaskAPI_GetRequest",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:9090/test",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "9090",
+          "path": [
+            "test"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "FlaskAPI_PostRequest",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"FirstName\":\"Chirag\",\r\n    \"LastName\" : \"Doshi\"\r\n\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:9090/test",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "9090",
+          "path": [
+            "test"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "FlaskAPI_PostRequest",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"FirstName\":\"Chirag\",\r\n    \"LastName\" : \"Doshi\"\r\n\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:9090/test",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "9090",
+              "path": [
+                "test"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "Werkzeug/3.1.3 Python/3.13.2"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 15 Oct 2026 23:15:39 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "41"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"response\": \"Hello, Doshi Chirag!\"\n}"
+        }
+      ]
+    }
+  ]
+}
