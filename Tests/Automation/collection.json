@@ -115,8 +115,8 @@
 			"protocolProfileBehavior": {"disableBodyPruning": true},
 			"request": {
 				"method": "POST",
-				"header": [{"key": "X-Api-Key", "value": "PMAK-6ad160ec1988b200013fb4e2-b967f3e16e91592492d72686fc8a954f9f", "type": "text"}],
-				"body": {"mode": "raw", "raw": "{\r\n    \"collectionId\": \"49414982-5e8f1b60-8429-4090-acfe-f567298ac098\"\r\n}", "options": {"raw": {"language": "json"}}},
+				"header": [{"key": "X-Api-Key", "value": "Postman Account API Key", "type": "text"}],
+				"body": {"mode": "raw", "raw": "{\r\n    \"collectionId\": \"My Collection ID\"\r\n}", "options": {"raw": {"language": "json"}}},
 				"url": {"raw": "https://api.getpostman.com/collections/run", "protocol": "https", "host": ["api", "getpostman", "com"], "path": ["collections", "run"]}
 			},
 			"response": [],
