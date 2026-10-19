@@ -17,4 +17,4 @@ import requests
 #    f.write(str(data).replace("'", "\""))  # Convert single quotes to double quotes for valid JSON
 
 
-subprocess.run(["C:\\Users\\CDoshi\\AppData\\Roaming\\npm\\newman.cmd", "run", "collection.json"])
+subprocess.run(["C:\\Users\\UserID\\AppData\\Roaming\\npm\\newman.cmd", "run", "collection.json"])
